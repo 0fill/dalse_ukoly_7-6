@@ -1,5 +1,7 @@
 import time,math
 
+from numpy import var
+
 print("Hello World!")
 
 def Task_1(list: list)-> float:
@@ -30,7 +32,15 @@ def is_prime(num):
     return True
 
 def Task_4(list: list, num: float)-> int:
-    tuple answer = None
+    answer = []
     for i in range(len(list)):
         if list[i] == num:
-            answer = answer,i
+            answer.append(i)
+    for k in answer[::-1]:
+        list.pop(k)
+    return answer
+test = [1,2,3,4,5,6,7,8,9,5,4,87,4,1,2,5,4,7,8,5,1,2,4,5,6,3,4,8,7,4,1,4]
+
+for i in Task_4(test,4):
+    print(test)
+    print(test[i])

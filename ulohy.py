@@ -1,4 +1,4 @@
-import time
+import time,math
 
 print("Hello World!")
 
@@ -12,23 +12,25 @@ def Task_2(list: list)-> float:
     list.sort()
     return list[0]
 
-def Task_2_1(list:list)-> float:
-    a = list[0]
-    for i in list[1:]:
-        if a<i:
-            a = i
-    return a
-num = 80000
-test = [1,5,4,8,-7,58,12,5,4,1,-58,8,4]
-t = time.time()
-for _ in range(num):
-    Task_2(test)
-t = time.time()-t
-print (t,end= ", ")
+def Task_3(list: list)-> int:
+    n = 0
+    for i in list:
+        if is_prime(i):
+            n += 1
+    return n
 
-t = time.time()
-for _ in range(num):
-    Task_2_1(test)
-t = time.time()-t
-print(t)
-    
+def is_prime(num):
+    if num in [0,1,2]:
+        return True
+    if num % 2 == 0:
+        return False
+    for k in range(3,int(math.sqrt(num))+1,2):
+        if num % k == 0:
+            return False 
+    return True
+
+def Task_4(list: list, num: float)-> int:
+    tuple answer = None
+    for i in range(len(list)):
+        if list[i] == num:
+            answer = answer,i

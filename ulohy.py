@@ -43,5 +43,8 @@ def Task_4(list: list, num: float)-> int:
 def Task_5(list_A: list, list_B):
     return list(set(list_A).intersection(set(list_B)))
 
+def Task_6(list: list,power):
+    result = [i**power for i in list]
+    return result
 
-print(Task_5([1,5,7,8,4,2],[2,5,7,1,3]))
+print (Task_6([1,2,3,4,5,6,7,8,9,10],3))

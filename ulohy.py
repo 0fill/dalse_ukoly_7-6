@@ -39,8 +39,9 @@ def Task_4(list: list, num: float)-> int:
     for k in answer[::-1]:
         list.pop(k)
     return answer
-test = [1,2,3,4,5,6,7,8,9,5,4,87,4,1,2,5,4,7,8,5,1,2,4,5,6,3,4,8,7,4,1,4]
 
-for i in Task_4(test,4):
-    print(test)
-    print(test[i])
+def Task_5(list_A: list, list_B):
+    return list(set(list_A).intersection(set(list_B)))
+
+
+print(Task_5([1,5,7,8,4,2],[2,5,7,1,3]))

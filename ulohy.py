@@ -1,8 +1,4 @@
-import time,math
-
-from numpy import var
-
-print("Hello World!")
+import math
 
 def Task_1(list: list)-> float:
     a = list[0]
@@ -47,4 +43,4 @@ def Task_6(list: list,power):
     result = [i**power for i in list]
     return result
 
-print (Task_6([1,2,3,4,5,6,7,8,9,10],3))
+

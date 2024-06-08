@@ -42,5 +42,3 @@ def Task_5(list_A: list, list_B):
 def Task_6(list: list,power):
     result = [i**power for i in list]
     return result
-
-
